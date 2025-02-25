@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => CategoryScreen()),
                 );
               },
-              child: Text('Iniciar', style: TextStyle(fontSize: 24)),
+              child: Text('Iniciar', style: TextStyle(fontSize: 26)),
             ),
           ),
         ],
