@@ -27,7 +27,7 @@ class CategoryScreen extends StatelessWidget {
                   _buildCategoryTile(context, '', 'assets/images/farm.png', FarmAnimalsScreen()),
                   _buildCategoryTile(context, '', 'assets/images/jungle.png', JungleAnimalsScreen()),
                   _buildCategoryTile(context, '', 'assets/images/africa.png',  AfricaAnimalsScreen()),
-                  _buildCategoryTile(context, '', 'assets/images/marine.png', TransportsScreen ()),
+                  _buildCategoryTile(context, '', 'assets/images/transporte.png', TransportsScreen ()),
                 ],
               );
             },

@@ -7,40 +7,43 @@ class JungleAnimalsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, String>> jungleAnimals = [
-      {'name': '', 'image': 'assets/images/boa.png', 'sound': 'boaAudio.mp3'},
+      {'name': '', 'image': 'assets/images/serpiente.png', 'sound': 'boaAudio.mp3'},
       {'name': '', 'image': 'assets/images/lemur.png', 'sound': 'lemurAudio.mp3'},
-      {'name': '', 'image': 'assets/images/parrot.png', 'sound': 'loroAudioj.mp3'},
-      {'name': '', 'image': 'assets/images/monkey.png', 'sound': 'moonoAudio.mp3'},
+      {'name': '', 'image': 'assets/images/parrot.png', 'sound': 'loroAudio.mp3'},
+      {'name': '', 'image': 'assets/images/monkey.png', 'sound': 'monoAudio.mp3'},
       {'name': '', 'image': 'assets/images/tucan.png', 'sound': 'tucanAudio.mp3'},
+      {'name': '', 'image': 'assets/images/rana.png', 'sound': 'rana.mp3'},
     ];
 
     return Scaffold(
       body: Stack(
         children: [
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
+          Center(
+            child: SizedBox(
+              width: MediaQuery.of(context).size.width * 0.9,
+              height: MediaQuery.of(context).size.height * 0.9,
+              child: GridView.count(
+                crossAxisCount: 3,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
-                childAspectRatio: 2.8,
+                childAspectRatio: 1.6,
+                children: List.generate(6, (index) {
+                  return _buildAnimalTile(
+                    jungleAnimals[index]['name']!,
+                    jungleAnimals[index]['image']!,
+                    jungleAnimals[index]['sound']!,
+                    isCenter: index == 2,
+                  );
+                }),
               ),
-              itemCount: jungleAnimals.length,
-              itemBuilder: (context, index) {
-                final animal = jungleAnimals[index];
-                return _buildAnimalTile(animal['name']!, animal['image']!, animal['sound']!);
-              },
             ),
           ),
-
-          
           Positioned(
-            top: 20,  
-            left: 10, 
+            top: 20,
+            left: 10,
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.purple[200], 
+                color: Colors.purple[200],
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
@@ -63,7 +66,7 @@ class JungleAnimalsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildAnimalTile(String name, String image, String sound) {
+  Widget _buildAnimalTile(String name, String image, String sound, {bool isCenter = false}) {
     return GestureDetector(
       onTap: () => _playSound(sound),
       child: Container(
@@ -73,6 +76,7 @@ class JungleAnimalsScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           borderRadius: BorderRadius.circular(12),
+          border: isCenter ? Border.all(color: const Color.fromARGB(255, 253, 252, 252), width: 3) : null,
         ),
         alignment: Alignment.bottomCenter,
         padding: const EdgeInsets.all(8),

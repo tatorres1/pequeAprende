@@ -10,6 +10,7 @@ class TransportsScreen extends StatelessWidget {
       {'name': '','image': 'assets/images/tren.png', 'sound': 'trenAudio.mp3'},
       {'name': '','image': 'assets/images/avion.png', 'sound': 'avionAudio.mp3'},
       {'name': '','image': 'assets/images/barco.png', 'sound': 'barcoAudio.mp3'},
+      {'name': '','image': 'assets/images/bicicleta.png', 'sound': 'barcoAudio.mp3'},
     ];
 
       return Scaffold(
