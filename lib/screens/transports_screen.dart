@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class AfricaAnimalsScreen extends StatelessWidget {
-  const AfricaAnimalsScreen({super.key});
+class TransportsScreen extends StatelessWidget {
+  const TransportsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, String>> africaAnimals = [
-      {'name': '', 'image': 'assets/images/hiena.png', 'sound': 'hienaAudio2.mp3'},
-      {'name': '', 'image': 'assets/images/elefante.png', 'sound': 'elefanteAudio.mp3'},
-      {'name': '', 'image': 'assets/images/leon.png', 'sound': 'leonAudioj.mp3'},
-      {'name': '', 'image': 'assets/images/zebra.png', 'sound': 'cebraAudioj.mp3'},
-      {'name': '', 'image': 'assets/images/hipo.png', 'sound': 'hipoAudio.mp3'},
+    final List<Map<String, String>> transports = [
+      {'name': '','image': 'assets/images/tren.png', 'sound': 'trenAudio.mp3'},
+      {'name': '','image': 'assets/images/avion.png', 'sound': 'avionAudio.mp3'},
+      {'name': '','image': 'assets/images/barco.png', 'sound': 'barcoAudio.mp3'},
     ];
 
-   return Scaffold(
+      return Scaffold(
       body: Stack(
         children: [
           Padding(
@@ -24,16 +22,17 @@ class AfricaAnimalsScreen extends StatelessWidget {
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
-                childAspectRatio: 2.4,
+                childAspectRatio: 2.8,
               ),
-              itemCount: africaAnimals.length,
+              itemCount: transports.length,
               itemBuilder: (context, index) {
-                final animal = africaAnimals[index];
-                return _buildAnimalTile(animal['name']!, animal['image']!, animal['sound']!);
+                final transport = transports[index];
+                return _buildAnimalTile(transport['name']!, transport['image']!, transport['sound']!);
               },
             ),
           ),
-  
+
+          
           Positioned(
             top: 20,  
             left: 10, 

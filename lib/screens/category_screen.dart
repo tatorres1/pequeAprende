@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:peque_aprende/screens/africa_animals_screen.dart';
 import 'package:peque_aprende/screens/jungle_animals_screen.dart'; 
 import 'package:peque_aprende/screens/farm_animals_screen.dart';
-import 'package:peque_aprende/screens/marine_animals_screen.dart'; 
+import 'package:peque_aprende/screens/transports_screen.dart'; 
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -10,7 +10,7 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Selecciona una categoría'),toolbarHeight: 28),
+      appBar: AppBar(title: Text('Selecciona una categoría'),toolbarHeight: 28,centerTitle: true,),
       body: Center( // Centrar el GridView
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
@@ -27,7 +27,7 @@ class CategoryScreen extends StatelessWidget {
                   _buildCategoryTile(context, '', 'assets/images/farm.png', FarmAnimalsScreen()),
                   _buildCategoryTile(context, '', 'assets/images/jungle.png', JungleAnimalsScreen()),
                   _buildCategoryTile(context, '', 'assets/images/africa.png',  AfricaAnimalsScreen()),
-                  _buildCategoryTile(context, '', 'assets/images/marine.png', MarineAnimalsScreen ()),
+                  _buildCategoryTile(context, '', 'assets/images/marine.png', TransportsScreen ()),
                 ],
               );
             },
@@ -50,7 +50,7 @@ class CategoryScreen extends StatelessWidget {
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(image),
-            fit: BoxFit.cover, // La imagen cubre todo el tile
+            fit: BoxFit.cover, 
           ),
           borderRadius: BorderRadius.circular(12),
         ),
