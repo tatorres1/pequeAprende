@@ -9,8 +9,8 @@ class TransportsScreen extends StatelessWidget {
     final List<Map<String, String>> transports = [
       {'name': '','image': 'assets/images/tren.png', 'sound': 'trenAudio.mp3'},
       {'name': '','image': 'assets/images/avion.png', 'sound': 'avionAudio.mp3'},
-      {'name': '','image': 'assets/images/barco.png', 'sound': 'barcoAudio.mp3'},
-      {'name': '','image': 'assets/images/bicicleta.png', 'sound': 'barcoAudio.mp3'},
+      {'name': '','image': 'assets/images/barco.png', 'sound': 'barcoaudioJoin.mp3'},
+      {'name': '','image': 'assets/images/bicicleta.png', 'sound': 'cleta.mp3'},
     ];
 
       return Scaffold(

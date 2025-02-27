@@ -7,7 +7,7 @@ class JungleAnimalsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<Map<String, String>> jungleAnimals = [
-      {'name': '', 'image': 'assets/images/serpiente.png', 'sound': 'boaAudio.mp3'},
+      {'name': '', 'image': 'assets/images/serpiente.png', 'sound': 'serpienteAudio.mp3'},
       {'name': '', 'image': 'assets/images/lemur.png', 'sound': 'lemurAudio.mp3'},
       {'name': '', 'image': 'assets/images/parrot.png', 'sound': 'loroAudio.mp3'},
       {'name': '', 'image': 'assets/images/monkey.png', 'sound': 'monoAudio.mp3'},

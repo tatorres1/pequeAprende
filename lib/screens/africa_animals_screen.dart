@@ -12,7 +12,7 @@ class AfricaAnimalsScreen extends StatelessWidget {
       {'name': '', 'image': 'assets/images/leon.png', 'sound': 'leonAudioj.mp3'},
       {'name': '', 'image': 'assets/images/zebra.png', 'sound': 'cebraAudioj.mp3'},
       {'name': '', 'image': 'assets/images/hipo.png', 'sound': 'hipoAudio.mp3'},
-      {'name': '', 'image': 'assets/images/bufalo.png', 'sound': 'bufalo2.mp3'},
+      {'name': '', 'image': 'assets/images/bufalo.png', 'sound': 'bufaloJoin.mp3'},
     ];
 
     return Scaffold(
